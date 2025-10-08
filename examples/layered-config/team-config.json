@@ -1,0 +1,8 @@
+{
+  "database": {
+    "host": "team-db.internal"
+  },
+  "cache": {
+    "ttl": 7200
+  }
+}

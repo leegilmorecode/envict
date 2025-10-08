@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/leegilmorecode/envict#readme
+    about: Read the documentation and examples
+  - name: 💬 GitHub Discussions
+    url: https://github.com/leegilmorecode/envict/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 🔍 Search Issues
+    url: https://github.com/leegilmorecode/envict/issues
+    about: Search existing issues before creating a new one

@@ -1,0 +1,13 @@
+{
+  "app": {
+    "name": "my-application",
+    "version": "1.0.0"
+  },
+  "server": {
+    "port": 3000,
+    "timeout": 30000
+  },
+  "logging": {
+    "level": "INFO"
+  }
+}

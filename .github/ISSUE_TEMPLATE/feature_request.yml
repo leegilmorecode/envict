@@ -1,0 +1,174 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for Envict
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm you have completed the following
+      options:
+        - label: I have searched existing issues to ensure this feature hasn't been requested before
+          required: true
+        - label: I have read the documentation and examples to confirm this feature doesn't already exist
+          required: true
+        - label: This feature request is specific to Envict (not a general Node.js or TypeScript question)
+          required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: A clear and concise description of the feature you'd like to see
+      placeholder: Briefly describe the feature...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What use case does it address?
+      placeholder: |
+        I'm trying to... but currently I have to...
+        This would be useful because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see implemented
+      placeholder: |
+        I would like Envict to support...
+        The API could look like...
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-design
+    attributes:
+      label: Proposed API Design
+      description: How would you like this feature to work? Show example usage.
+      render: typescript
+      placeholder: |
+        // Example of how the new feature would be used
+        import { Envict } from '@serverless-advocate/envict';
+
+        const config = new Envict({ schema });
+
+        // Your proposed API usage here
+        const result = config.newFeature();
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature is this?
+      options:
+        - "New API method"
+        - "New configuration loader"
+        - "New data format support"
+        - "Performance improvement"
+        - "Developer experience enhancement"
+        - "Integration with external service"
+        - "Other (please specify in description)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - "Low - Nice to have"
+        - "Medium - Would be helpful"
+        - "High - Important for my use case"
+        - "Critical - Blocking my project"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What alternatives have you considered? How are you currently working around this limitation?
+      placeholder: |
+        I've considered...
+        Currently I'm using...
+        Other libraries that do this...
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Describe specific use cases where this feature would be beneficial
+      placeholder: |
+        Use case 1: When building microservices...
+        Use case 2: In CI/CD pipelines...
+        Use case 3: For cloud deployments...
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Real-world Examples
+      description: Provide real-world examples or scenarios where this would be useful
+      placeholder: |
+        Example 1: Loading configuration from Kubernetes ConfigMaps
+        Example 2: Dynamic configuration updates in serverless functions
+        Example 3: Multi-tenant configuration management
+
+  - type: checkboxes
+    id: breaking-changes
+    attributes:
+      label: Breaking Changes
+      description: Would this feature require breaking changes?
+      options:
+        - label: This feature would require breaking changes to existing APIs
+          required: false
+        - label: This feature can be implemented without breaking existing functionality
+          required: false
+        - label: I'm not sure about the impact on existing APIs
+          required: false
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation Notes
+      description: Any thoughts on how this could be implemented? Technical considerations?
+      placeholder: |
+        This could be implemented by...
+        Technical considerations include...
+        Dependencies might include...
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Would you be willing to help implement this feature?
+      options:
+        - label: I would be willing to submit a PR to implement this feature
+          required: false
+        - label: I would be willing to help with testing and feedback
+          required: false
+        - label: I would be willing to help with documentation
+          required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context, mockups, or information that might help
+      placeholder: Add any other context about the feature request here...

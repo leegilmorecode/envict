@@ -1,0 +1,13 @@
+{
+  "server": {
+    "port": 4000,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "url": "postgresql://localhost:5432/myapp",
+    "maxConnections": 10
+  },
+  "features": {
+    "enableMetrics": true
+  }
+}

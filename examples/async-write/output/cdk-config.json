@@ -1,0 +1,13 @@
+{
+  "apiUrl": "https://api.production.com",
+  "timeout": 10000,
+  "retries": 5,
+  "database": {
+    "host": "prod-db.example.com",
+    "port": 5432
+  },
+  "features": {
+    "enableAuth": true,
+    "enableMetrics": true
+  }
+}

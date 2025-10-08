@@ -1,0 +1,13 @@
+{
+  "service": {
+    "name": "user-service",
+    "port": 8080
+  },
+  "database": {
+    "connectionString": "postgresql://localhost:5432/users"
+  },
+  "security": {
+    "jwtSecret": "dev-secret-key",
+    "sessionTimeout": 1800
+  }
+}

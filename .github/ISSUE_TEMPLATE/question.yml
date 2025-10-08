@@ -1,0 +1,160 @@
+name: ❓ Question
+description: Ask a question about using Envict
+title: "[Question]: "
+labels: ["question", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your question! Please provide as much context as possible to help us give you the best answer.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm you have completed the following
+      options:
+        - label: I have read the README and documentation
+          required: true
+        - label: I have checked the examples directory for similar use cases
+          required: true
+        - label: I have searched existing issues and discussions for similar questions
+          required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know about Envict?
+      placeholder: Ask your question here...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What category does your question fall into?
+      options:
+        - "Getting Started / Basic Usage"
+        - "Configuration Schema Design"
+        - "Environment Variables"
+        - "File Loading"
+        - "Async Loading"
+        - "Type Safety / TypeScript"
+        - "Error Handling"
+        - "Performance"
+        - "Best Practices"
+        - "Integration with Frameworks"
+        - "Deployment / Production"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide context about what you're trying to achieve
+      placeholder: |
+        I'm building a...
+        I need to...
+        My use case is...
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-approach
+    attributes:
+      label: What Have You Tried?
+      description: What approaches have you already attempted?
+      placeholder: |
+        I tried...
+        I looked at...
+        I expected...
+
+  - type: textarea
+    id: code-example
+    attributes:
+      label: Code Example
+      description: Share relevant code that demonstrates your question or current approach
+      render: typescript
+      placeholder: |
+        import { Envict } from '@serverless-advocate/envict';
+
+        // Your current code here
+        const schema = {
+          // ...
+        };
+
+        const config = new Envict({ schema });
+
+  - type: input
+    id: envict-version
+    attributes:
+      label: Envict Version
+      description: What version of Envict are you using?
+      placeholder: "0.1.0-alpha.1"
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: What environment are you working in?
+      options:
+        - "Local Development"
+        - "CI/CD Pipeline"
+        - "Docker Container"
+        - "AWS Lambda"
+        - "Kubernetes"
+        - "Serverless Framework"
+        - "CDK/CloudFormation"
+        - "Other (please specify in additional context)"
+
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework/Platform
+      description: What framework or platform are you using with Envict?
+      options:
+        - "Express.js"
+        - "Fastify"
+        - "NestJS"
+        - "Next.js"
+        - "AWS CDK"
+        - "Serverless Framework"
+        - "Plain Node.js"
+        - "Other (please specify in additional context)"
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: What outcome are you hoping to achieve?
+      placeholder: |
+        I want to be able to...
+        The ideal solution would...
+        I expect this to work like...
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful
+      placeholder: |
+        Additional details...
+        Related documentation...
+        Similar tools I've used...
+
+  - type: checkboxes
+    id: help-improve
+    attributes:
+      label: Help Improve Documentation
+      description: Would this question indicate missing or unclear documentation?
+      options:
+        - label: This question suggests the documentation could be improved
+          required: false
+        - label: I would be willing to help improve the documentation based on the answer
+          required: false

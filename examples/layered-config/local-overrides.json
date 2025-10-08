@@ -1,0 +1,11 @@
+{
+  "database": {
+    "port": 5433
+  },
+  "cache": {
+    "enabled": false
+  },
+  "api": {
+    "timeout": 10000
+  }
+}
